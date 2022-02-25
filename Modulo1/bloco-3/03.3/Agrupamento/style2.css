@@ -1,0 +1,7 @@
+.cor:hover {border: 2px solid red;}
+.primaria {color: blue; padding-left: 15px;}
+.segundaria {color: brown; background-color: coral;}
+.complementar {color: aquamarine; font-weight: lighter; font-size: 30px;}
+.escura {color: darkviolet; font-family: monospace;}
+.clara {color: lightgreen; padding: 10px;}
+.impar {font-style: italic;}

@@ -1,0 +1,5 @@
+h1, p {text-align: center;}
+ol:hover {background-color: blue;}
+ol:active {font: 'shizuru';}
+ol, ul {list-style: none;}
+/* .di:hover {background-color: aquamarine;} */

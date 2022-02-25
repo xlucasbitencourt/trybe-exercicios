@@ -1,0 +1,13 @@
+ol li {background-color: yellow;}
+ol li.par {color: green;}
+ol li.impar {text-transform: uppercase;}
+.header {color: red;}
+.header em {font-size: 40px;
+            border: 1px solid black;
+}
+li {font-size: 20px;}
+li em {font-weight: bold;}
+ul.lingua li:nth-child(-n+3) {color: blue;} /*A pseudo-classe CSS :nth-child() seleciona elementos com base em suas posições em um grupo de elementos irmãos.nth-child  */
+ul li a:hover {font-weight: bold;
+                color:currentColor;
+}

@@ -1,9 +1,18 @@
+body {
+    border: 1px solid purple;
+}
+
+
 #indice ul li {
     display: inline;
 }
 
 article {
     border: 1px solid red;
+}
+img {
+    float: left;
+    width: 300px;
 }
 
 section {

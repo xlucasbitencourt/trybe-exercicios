@@ -1,0 +1,16 @@
+#indice ul li {
+    display: inline;
+}
+
+article {
+    border: 1px solid red;
+}
+
+section {
+    border: 1px solid yellow;
+}
+
+aside {
+    border: 1px solid green;
+    float: right;
+}

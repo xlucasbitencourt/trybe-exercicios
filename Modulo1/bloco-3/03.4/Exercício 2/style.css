@@ -1,6 +1,7 @@
 body {
     border: 1px solid purple;
     min-width: 555px;
+    margin: 1% 5%;
 }
 
 header h1 {
@@ -19,6 +20,27 @@ header h1 {
     display: inline;
 }
 
+aside {
+    border: 2px solid lightblue;
+    background-color: rgba(0, 255, 106, 0.30);
+    border-radius: 3%;
+    float: right;
+    width: 30%;
+}
+
+table th {
+    background-color: rgb(6, 172, 0);
+    border: 1px solid turquoise;
+    text-align: center;
+    display: block;
+    width: 200%;
+}
+
+#classificacao td {
+    border: 1px solid gold;
+    text-align: center;
+}
+
 article {
     border: 1px solid red;
 }
@@ -31,6 +53,10 @@ article p {
     font-size: 110%;
 }
 
+section {
+    border: 1px solid yellow;
+}
+
 section h3 {
     font-size: 200%;
 }
@@ -38,13 +64,9 @@ section h3 {
 img {
     float: left;
     width: 200px;
+    border-radius: 10%;
 }
-
-section {
-    border: 1px solid yellow;
-}
-
-aside {
-    border: 1px solid green;
-    float: right;
+footer {
+    font-size: 200%;
+    text-align: center;
 }

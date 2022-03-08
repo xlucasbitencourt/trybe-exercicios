@@ -9,7 +9,7 @@ console.log(menuServices);
 //Exercício 2
 //Procure o índice do valor "Portfólio" do array menu :
 
-let indexOfPortfolio = menu[2];
+let indexOfPortfolio = menu.indexOf('Portfólio');
 
 console.log(indexOfPortfolio);
 

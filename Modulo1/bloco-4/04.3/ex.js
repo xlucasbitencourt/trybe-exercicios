@@ -54,7 +54,7 @@ for (let num=0; num <50; num++){
         }
     }
     if(divisores === 2){
-        primo ++;
+        primo = num;
     }
 }
 

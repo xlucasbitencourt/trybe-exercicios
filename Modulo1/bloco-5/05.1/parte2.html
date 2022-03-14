@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <header>
+        <h2 id="page-title">Título</h2>
+        <p id="paragraph" class="paragrafos">Dê uma cor para este parágrafo!</p>
+        <h4 id="subtitle">Subtítulo</h4>
+        <p id="second-paragraph" class="paragrafos">Segundo parágrafo!</p>
+    </header>
+    <script>
+        const paragraph = document.getElementById("paragraph");
+        paragraph.style.color = "red";
+        document.getElementById('page-title').innerText = 'Esqueceram de mim!';
+        document.getElementById('second-paragraph').style.backgroundColor = 'blue'; //declaração diferente do que no arquivo css
+        document.getElementById('subtitle').style.textAlign = 'center';
+        document.getElementsByClassName('paragrafos')[0].innerText = 'Parágrafo substituído';
+        document.getElementsByTagName('h4')[0].style.color = 'purple';
+        let paragrafos =  [];
+        for (let index = 0; index <= document.getElementsByClassName('paragrafos').length - 1; index ++) {
+            paragrafos[index] = document.getElementsByClassName('paragrafos')[index].innerText;
+        }
+        console.log(paragrafos);
+    </script>
+</body>
+
+</html>

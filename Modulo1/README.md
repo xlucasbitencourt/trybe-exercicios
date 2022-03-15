@@ -1,6 +1,6 @@
 # Fundamentos do Desenvolvimento Web
 
-_Este primeiro módulo é composto dos seguintes 9 blocos:_
+## _Este primeiro módulo é composto dos seguintes 9 blocos:_
 
 ### Bloco 01: Unix & Bash
 ### Bloco 02: Git, GitHub e Internet
@@ -12,4 +12,4 @@ _Este primeiro módulo é composto dos seguintes 9 blocos:_
 ### Bloco 08: Higher Order Functions do JavaScript ES6
 ### Bloco 09: JavaScript e Testes Assíncronos
 
-O módulo foi iniciado no dia 16/02/2022.
+#### O módulo foi iniciado no dia 16/02/2022.

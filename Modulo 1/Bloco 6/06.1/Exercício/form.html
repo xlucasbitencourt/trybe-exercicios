@@ -43,16 +43,26 @@
             <input id="concordo" type="checkbox">
             <label for="concordo">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
             <br> <br>
-            <button id="enviar" type="submit">Enviar</button>
+            <button id="enviar" type="submit" disabled>Enviar</button>
             <button id="apagar" type="button">Apagar</button>
         </fieldset>
     </form>
     <script>
         const botaoEnviar = document.getElementById('enviar');
         const botaoApagar = document.getElementById('apagar');
+        const checkConcordo = document.getElementById('concordo');
+        const nome = document.getElementById('nome');
+        const email = document.getElementById('email');
+        const resposta = document.getElementById('resposta');
 
         function interrrompePadrao(alvo) {
             alvo.preventDefault();
+            const valido = verifica();
+            if (valido === false) {
+                alert('Dados inválidos');
+            } else {
+                alert('Dados enviados!');
+            }
         }
         botaoEnviar.addEventListener('click', interrrompePadrao);
 
@@ -67,6 +77,29 @@
             texto.value = '';
         }
         botaoApagar.addEventListener('click', apagar);
+
+        function liberarEnvio() {
+            botaoEnviar.disabled = !checkConcordo.checked;
+        }
+        checkConcordo.addEventListener('change', liberarEnvio);
+
+        function verifica() {
+            const tamanhoNome = nome.length;
+            const nomeIvalido = tamanhoNome < 10 || tamanhoNome > 40;
+
+            const tamanhoEmail = email.length;
+            const emailInvalido = tamanhoEmail < 10 || tamanhoEmail > 50;
+
+            const tamanhoResposta = resposta.length;
+            const respostaIvalida = tamanhoResposta > 50;
+
+            if (nomeIvalido || emailInvalido || respostaIvalida) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
 
     </script>
 </body>

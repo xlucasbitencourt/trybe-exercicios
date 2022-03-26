@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/06.2/bootstrap-5.1.3-dist/css/bootstrap.min.css">
+    <title>Form</title>
+</head>
+<body>
+    <form class="container" id="form" action="" method="get">
+        <fieldset>
+            <legend>Formulário TrybeTrip</legend>
+            <label class="form-label" for="name">Nome completo: </label>
+            <input class="form-control" id="name" type="text" name="nome">
+            <br>
+            <label class="form-label" for="email">E-mail: </label>
+            <input class="form-control" id="email" type="email" minlength="10" maxlength="50">
+            <br>
+            <label class="form-label" for="destino">Destino favorito: </label>
+            <br>
+            <label class="form-check-label" for="cidade">Cidade</label>
+            <input class="form-check-input" id="cidade" type="radio" name="destino">
+            <label class="form-check-label" for="campo">Campo</label>
+            <input class="form-check-input" id="campo" type="radio" name="destino">
+            <label class="form-check-label" for="praia">Praia</label>
+            <input class="form-check-input" id="praia" type="radio" name="destino">
+            <label class="form-check-label" for="montanha">Montanha</label>
+            <input class="form-check-input" id="montanha" type="radio" name="destino">
+            <br>
+            <label class="form-label" for="resposta">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+            <br>
+            <textarea class="form-control" name="resposta" id="resposta" cols="30" rows="10" maxlength="500"></textarea>
+            <br>
+            <label class="form-label" for="data">Qual a melhor data para realizar sua viagem? </label>
+            <input id="data" type="date">
+            <br>
+            <label class="form-label" for="ofertas">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+            <label class="form-check-label" for="oferta-sim">Sim</label>
+            <input class="form-check-input" id="oferta-sim" type="radio" name="oferta">
+            <label class="form-check-label" for="oferta-nao">Não</label>
+            <input class="form-check-input" type="radio" name="oferta" id="oferta-nao">
+            <br>
+            <br>
+
+            <div class="input-group mb-3">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" id="concordo" type="checkbox" value=""
+                        aria-label="Checkbox for following text input">
+                </div>
+                <label for="concordo" type="text" class="form-control" aria-label="Text input with checkbox">Concordo que
+                    imagens das minhas férias poderão ser
+                    usadas na divulgação de concursos futuros.</label>
+            </div>
+            <br>
+            <div class="d-grid gap-2">
+                <button class="btn btn-outline-primary btn-lg" id="enviar" type="submit" >Enviar</button>
+                <button class="btn btn-outline-warning btn-lg" id="apagar" type="button">Apagar</button>
+            </div>
+  
+
+        </fieldset>
+    </form>
+
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script>
+        const validate = new window.JustValidate('#form');
+
+        const validation = new JustValidate('#form');
+
+validation
+  .addField('#name', [
+    {
+      rule: 'minLength',
+      value: 3,
+    },
+    {
+      rule: 'maxLength',
+      value: 30,
+    },
+  ])
+  .addField('#email', [
+    {
+      rule: 'required',
+      errorMessage: 'Email is required',
+    },
+    {
+      rule: 'email',
+      errorMessage: 'Email is invalid!',
+    },
+  ]);
+
+    </script>
+    <script>
+        const botaoEnviar = document.getElementById('enviar');
+        const botaoApagar = document.getElementById('apagar');
+        const checkConcordo = document.getElementById('concordo');
+        const nome = document.getElementById('nome');
+        const email = document.getElementById('email');
+        const resposta = document.getElementById('resposta');
+
+      //  function interrrompePadrao(alvo) {
+        //    alvo.preventDefault();
+        //    const valido = verifica();
+         //   if (valido === false) {
+          //      alert('Dados inválidos');
+          //  } else {
+          //      alert('Dados enviados!');
+          //  }
+       // }
+       // botaoEnviar.addEventListener('click', interrrompePadrao);
+
+        function apagar() {
+            const campos = document.querySelectorAll('input');
+            const texto = document.querySelector('textarea');
+            for (let index = 0; index < campos.length; index++) {
+                const dados = campos[index];
+                dados.value = '';
+                dados.checked = false;
+            }
+            texto.value = '';
+        }
+        botaoApagar.addEventListener('click', apagar);
+
+      //  function liberarEnvio() {
+       //     botaoEnviar.disabled = !checkConcordo.checked;
+       // }
+       // checkConcordo.addEventListener('change', liberarEnvio);
+
+      //  function verifica() {
+        //    const tamanhoNome = nome.length;
+          //  const nomeIvalido = tamanhoNome < 10 || tamanhoNome > 40;
+
+//            const tamanhoEmail = email.length;
+  //          const emailInvalido = tamanhoEmail < 10 || tamanhoEmail > 50;
+
+//            const tamanhoResposta = resposta.length;
+  //          const respostaIvalida = tamanhoResposta > 50;
+
+//            if (nomeIvalido || emailInvalido || respostaIvalida) {
+  //              return false;
+    //        }
+      //      else {
+        //        return true;
+          //  }
+       // }
+
+    </script>
+</body>
+</html>

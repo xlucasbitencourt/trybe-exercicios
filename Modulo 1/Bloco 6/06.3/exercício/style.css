@@ -44,6 +44,7 @@ header { /* Exercício 1 */
   min-width: 30%;
   max-width: 60%;
   margin: 10px auto;
+  height: 400px;
 }
 
 .img-item {
@@ -53,11 +54,13 @@ header { /* Exercício 1 */
   justify-content: center;
   flex-direction: column;
   background-color: lightblue;
-  border-radius: 20%;
+  border-radius: 15%;
   width: 180px;
+  margin: 3px;
+  box-shadow: 5px 10px blue;
 }
 hr {
-  margin: 10px 20%;
+  margin: 20px 20%;
 }
 
 footer {

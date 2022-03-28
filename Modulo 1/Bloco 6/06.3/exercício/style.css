@@ -24,6 +24,7 @@ header { /* Exercício 1 */
   color: white;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: nowrap;
 }
 
 .under-text {

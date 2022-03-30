@@ -1,0 +1,99 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 10px 8px;
+}
+
+header p {
+    font-size: 22px;
+    text-align: center;
+}
+
+#menu {
+    text-align: center;
+}
+
+#menu li {
+    display: inline-block;
+    list-style-type: none;
+    margin: 0 5px;
+    font-size: 18px;
+}
+
+.main-content h1 {
+    font-size: 25px;
+}
+
+.main-content p, footer p {
+    text-align: justify;
+}
+
+@media screen and (min-width: 760px){
+    body {
+        margin: 10px 10%;
+    }
+
+    header p {
+        font-size: 40px;
+    }
+    
+    .menu-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+     .aside-one {
+         width: 50%;
+        display: inline-block;
+    }
+    
+    .aside-two {
+        display: inline-block;
+        width: 40%;
+    } 
+
+    .main-content p {
+        line-height: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    body {
+        margin: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu-container {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .aside-one {
+        width: 20%;
+       display: block;
+   }
+
+    .aside-two {
+        display: block;
+        width: 20%;
+    } 
+
+    .container {
+        margin: 10px 15%;
+    }
+}

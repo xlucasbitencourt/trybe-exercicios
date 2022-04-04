@@ -40,6 +40,6 @@ const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
 // Seu código aqui.
 
-let ordena = oddsAndEvens.sort(function(a, b) {return a - b});
+const ordena = oddsAndEvens.sort((a, b) => a - b); // arrow function dentro do sort
 
 console.log(`Os números ${ordena} se encontram ordenados de forma crescente!`);

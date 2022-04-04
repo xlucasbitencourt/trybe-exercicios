@@ -17,7 +17,7 @@ function testingScope(escopo) {
 testingScope(true);
 
 
-function testingScope(escopo) {
+const testingScope = escopo => {
     if (escopo === true) {
         let ifScope = 'Não devo ser utilizada fora do meu escopo (if)';
         ifScope = ifScope + ' ótimo, fui utilizada no escopo !';
@@ -38,8 +38,8 @@ testingScope(true);
 
 const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-let ordena = (oddsAndEvens) => array.sort(oddsAndEvens);
-
 // Seu código aqui.
 
-console.log(ordena(oddsAndEvens)); // será necessário alterar essa linha 😉
+let ordena = oddsAndEvens.sort(function(a, b) {return a - b});
+
+console.log(`Os números ${ordena} se encontram ordenados de forma crescente!`);

@@ -1,3 +1,5 @@
+// Selecione cada exercício para o código rodar corretamente. Rodar o arquivo todo resultará em erro
+
 // Array.forEach
 
 // 1 - Use o método forEach chamando a callback showEmailList para apresentar os emails

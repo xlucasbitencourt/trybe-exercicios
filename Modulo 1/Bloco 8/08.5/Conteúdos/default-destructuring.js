@@ -1,10 +1,10 @@
-const person = {
+const personA = {
     name: 'João',
     lastName: 'Jr',
     age: 34,
 };
 
-const { nationality = 'Brazilian'} = person;
+const { nationality = 'Brazilian'} = personA;
 
 console.log(nationality);
 

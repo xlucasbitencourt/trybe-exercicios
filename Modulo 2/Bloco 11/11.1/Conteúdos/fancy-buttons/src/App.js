@@ -1,9 +1,6 @@
 import React from 'react';
-import './App.css';
 
-const ola = () => console.log('inicio');
-const meio = () => console.log('meio');
-const fim = () => console.log('fim');
+const ola = () => console.log('inicio'); // não usar desta forma
 
 /* function App() {
   let a = 2;
@@ -21,11 +18,14 @@ const fim = () => console.log('fim');
 class App extends React.Component {
   constructor() {
     super();
-    this.state = {
-      cliques: 0
-    }
+    // this.state = {
+    //   cliques: 0
+    // }
     this.extra = this.extra.bind(this);
-    this.conta = this.conta.bind(this);
+  }
+
+  state = {
+    cliques: 0
   }
 
   extra() {
@@ -33,21 +33,29 @@ class App extends React.Component {
     console.log(this);
   }
 
-  conta() {
+  conta = () => { // com arrow function, não precisa do bind
     this.setState((nomeQualquer, _props) => ({
       cliques: nomeQualquer.cliques + 1
+      
     }))
+    console.log(this.state.cliques);
+    console.log(this.cor());
+  }
+
+  cor = () => {
+    if (this.state.cliques % 2 === 0) {
+      return 'green'
+    }
+    return 'white'
   }
 
   render() { 
-    console.log(this);
+    // console.log(this);
     return (
       <>
-    <button onClick={ola}>inicio</button>
-    <button onClick={meio}>meio</button>
-    <button onClick={fim}>fim</button>
-    <button onClick={this.extra}>extra</button>
-    <button onClick={this.conta}>{this.state.cliques}</button>
+    <button onClick={ola}>errado</button>
+    <button onClick={this.extra}>exibe this</button>
+    <button onClick={this.conta} style={{backgroundColor: this.cor()}}>{this.state.cliques}</button>
     </>
     );
   }

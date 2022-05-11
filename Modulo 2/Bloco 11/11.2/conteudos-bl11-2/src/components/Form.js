@@ -1,4 +1,7 @@
 import React, { Component } from "react";
+import Comparecer from "./Comparecer";
+import Estado from "./Estado";
+import Idade from "./Idade";
 // import './Form.css'
 
 class Form extends Component {
@@ -21,7 +24,7 @@ class Form extends Component {
 
   mudaForm = ({ target }) => {
     // não precisa declarar no constructor quando é arrow function
-    const { name } = target;
+    const { name } = target; // desestruturação
     const value = target.type === "checkbox" ? target.checked : target.value;
 
     this.setState({
@@ -29,50 +32,33 @@ class Form extends Component {
     });
   };
 
+  botaoEnviar = (event) => {
+    event.preventDefault();
+    console.log(event.target);
+    alert('olá');
+  }
+
   render() {
+    const { estadoFavorito, vaiComparecer, idade } = this.state; // desestruturação
+
     return (
       <div>
         <h1>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h1>
-        <form className='form'>
+        <form className='form' onSubmit={this.botaoEnviar}>
           <fieldset>
             <legend>Título</legend>
-            <label>
-              Diga qual o seu Estado favorito! De React ou do Brasil, você decide! =)
-              <textarea
-                name='estadoFavorito'
-                value={this.state.estadoFavorito}
-                onChange={this.mudaForm}
-              />
-            </label>
+            <Estado value={estadoFavorito} mudaForm={this.mudaForm} />
           </fieldset>
           <br />
-          <label>
-            Qual sua idade?
-            <input
-              type='number'
-              name='idade'
-              value={this.state.idade}
-              onChange={this.mudaForm}
-            />
-          </label>
+          <Idade value={idade} mudaForm={this.mudaForm} />
           <br />
-          <label>
-            Vai comparecer?
-            <input
-              type='checkbox'
-              name='vaiComparecer'
-              value={this.state.vaiComparecer}
-              onChange={this.mudaForm}
-            />
-          </label>
+          <Comparecer value={vaiComparecer} mudaForm={this.mudaForm} />
           <br />
           <label>
             Insira seu arquivo
-            <input 
-              type='file'
-              name="arquivo"
-            />
+            <input type='file' name='arquivo' />
           </label>
+          <button type="submit" >Clique aqui</button>
         </form>
       </div>
     );

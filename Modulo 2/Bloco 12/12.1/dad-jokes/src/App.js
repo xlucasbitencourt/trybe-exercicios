@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Counter from './Counter';
+import DadJoke from './DadJoke';
 
 function App() {
   return (
     <div className="App">
-      <h1>Olá</h1>
+      <DadJoke />
+      <Counter />
     </div>
   );
 }

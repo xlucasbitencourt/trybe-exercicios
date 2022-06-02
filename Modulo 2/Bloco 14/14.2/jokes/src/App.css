@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+
+p {
+  color: rgb(10, 190, 19);
+  font-size: 20px;
+  text-align: center;
+}
+
+button {
+  margin: 0 50%;
+}
